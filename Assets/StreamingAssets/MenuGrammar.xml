@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<grammar version="1.0" xml:lang="en" root="MenuCommands" tag-format="semantics/1.0"
+ xmlns="http://www.w3.org/2001/06/grammar">
+
+ <rule id="MenuCommands">
+   <one-of>
+     <item>Select</item>
+     <item>Pick</item>
+     <item>Use</item>
+     <item>Choose</item>
+   </one-of>
+   <one-of>
+     <item>
+       <ruleref uri="#StartRule" />
+     </item>
+     <item>
+       <ruleref uri="#OptionsRule" />
+     </item>
+     <item>
+       <ruleref uri="#QuitRule" />
+     </item>
+     <item>
+       <ruleref uri="#BackRule" />
+     </item>
+   </one-of>
+ </rule>
+
+ <rule id="StartRule">
+   <tag>out.action="Start";</tag>
+   <one-of>
+     <item>Start</item>
+     <item>Begin</item>
+     <item>Go</item>
+     <item>Lets Battle</item>
+     <item>Start Game</item>
+     <item>Begin Game</item>
+   </one-of>
+ </rule>
+
+ <rule id="OptionsRule">
+   <tag>out.action="Options";</tag>
+   <one-of>
+     <item>Options</item>
+     <item>Settings</item>
+   </one-of>
+ </rule>
+
+ <rule id="QuitRule">
+   <tag>out.action="Quit";</tag>
+   <one-of>
+     <item>Quit</item>
+     <item>Exit</item>
+     <item>Quit Game</item>
+     <item>Exit Game</item>
+   </one-of>
+ </rule>
+
+ <rule id="BackRule">
+   <tag>out.action="Back";</tag>
+   <one-of>
+     <item>Back</item>
+     <item>Leave</item>
+     <item>Go Back</item>
+   </one-of>
+ </rule>
+
+</grammar>

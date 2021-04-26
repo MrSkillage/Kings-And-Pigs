@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar version="1.0" xml:lang="en" root="playCommands" tag-format="semantics/1.0"
+ xmlns="http://www.w3.org/2001/06/grammar">
+
+ <rule id="playCommands">
+   <one-of>
+     <item>
+       <ruleref uri="#AttackRule" />
+     </item>
+     <item>
+       <ruleref uri="#JumpRule" />
+     </item>
+     <item>
+       <ruleref uri="#JumpAttakRule" />
+     </item>
+   </one-of>
+ </rule>
+
+ <rule id="AttackRule">
+   <tag>out.action="Attack";</tag>
+   <one-of>
+     <item>Attack</item>
+     <item>Hit</item>
+     <item>Strike</item>
+     <item>Assault</item>
+   </one-of>
+ </rule>
+
+ <rule id="JumpRule">
+   <tag>out.action="Jump";</tag>
+   <one-of>
+     <item>Jump</item>
+     <item>Bounce</item>
+     <item>Up</item>
+     <item>Hop</item>
+   </one-of>
+ </rule>
+
+ <rule id="JumpAttakRule">
+   <tag>out.action="JumpAttack";</tag>
+   <one-of>
+     <item>
+       <ruleref uri="#JumpRule" />
+     </item>
+   </one-of>
+   <one-of>
+     <item>
+       <ruleref uri="#AttackRule" />
+     </item>
+   </one-of>
+ </rule>
+</grammar>
