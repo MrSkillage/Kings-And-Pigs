@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     Animator animator;
+    public EndMenu menu;
+
     int maxHealth = 3;
     public int health;
     public int numOfHearts;
@@ -59,6 +61,9 @@ public class PlayerStats : MonoBehaviour
 
     void Die()
     {
+        animator.SetBool("IsDead", true);
+        menu.DisplayEndGameHUD();
+        Time.timeScale = 0;
         Debug.Log("You have Died!");
     }
 

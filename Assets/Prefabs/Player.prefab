@@ -169,7 +169,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 2
   m_Sprite: {fileID: 4236677631525818213, guid: 5e74465d7d7e4c6449b94d0f00bbea3e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21cca59f98279a4caa84357f06c6ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
   health: 3
   numOfHearts: 3
   hearts:
